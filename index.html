@@ -4,27 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>欧夏佚 · 作品集</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>💼</text></svg>">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ==================== HERO：泡泡导航 ==================== -->
+  <!-- ==================== HERO ==================== -->
   <section id="hero" class="hero">
     <div class="hero-content">
-      <h1 class="hero-title">欧夏佚作品集</h1>
+      <div class="hero-photo-wrap">
+        <img src="images/photo/work-photo.jpg" alt="欧夏佚" class="hero-photo">
+      </div>
+      <h1 class="hero-title">欧夏佚 作品集</h1>
       <p class="hero-subtitle">求职意向：产品经理</p>
       <p class="hero-tags">能力：AI + 数据 + 洞察 + 审美 + 落地</p>
     </div>
 
-    <!-- 泡泡导航 -->
+    <!-- 泡泡导航 — 4个 -->
     <div class="bubbles-container">
       <div class="bubble bubble-1" data-target="about">
         <span class="bubble-title">个人简介</span>
-        <span class="bubble-preview">中传硕士 · 民大学士<br>广告学×产品经理</span>
+        <span class="bubble-preview">中传硕·民大本<br>广告学×产品经理</span>
       </div>
       <div class="bubble bubble-2" data-target="vibecoding">
         <span class="bubble-title">Vibe Coding</span>
-        <span class="bubble-preview">4个AI驱动产品<br>从0到1独立交付</span>
+        <span class="bubble-preview">个人独立用AI驱动<br>的产品样例</span>
       </div>
       <div class="bubble bubble-3" data-target="design-aesthetic">
         <span class="bubble-title">设计审美</span>
@@ -34,15 +38,10 @@
         <span class="bubble-title">比赛项目</span>
         <span class="bubble-preview">国家级一等奖<br>数据新闻三等奖</span>
       </div>
-      <div class="bubble bubble-5" data-target="contact">
-        <span class="bubble-title">联系我</span>
-        <span class="bubble-preview">邮箱 · 微信<br>简历下载</span>
-      </div>
     </div>
 
-    <!-- 向下滚动提示 -->
     <div class="scroll-hint">
-      <span>向下滚动探索</span>
+      <span>点击泡泡跳转或向下滚动探索</span>
       <div class="scroll-arrow"></div>
     </div>
   </section>
@@ -51,7 +50,8 @@
   <section id="about" class="section about">
     <div class="section-container">
       <h2 class="section-title">个人简介</h2>
-      <div class="about-grid">
+      <div class="about-grid about-grid-3col">
+        <!-- 教育背景 -->
         <div class="about-card">
           <h3 class="about-card-title">教育背景</h3>
           <div class="edu-item">
@@ -70,6 +70,7 @@
             </div>
           </div>
         </div>
+        <!-- 关于我 -->
         <div class="about-card">
           <h3 class="about-card-title">关于我</h3>
           <p class="about-text">
@@ -80,14 +81,23 @@
           </p>
           <div class="skill-tags">
             <span class="skill-tag">AI产品设计</span>
+            <span class="skill-tag">Vibe Coding</span>
             <span class="skill-tag">用户研究</span>
             <span class="skill-tag">数据分析</span>
             <span class="skill-tag">Figma原型</span>
             <span class="skill-tag">低代码开发</span>
             <span class="skill-tag">Prompt工程</span>
             <span class="skill-tag">视觉设计</span>
-            <span class="skill-tag">动画制作</span>
           </div>
+        </div>
+        <!-- 简历图片 -->
+        <div class="about-card about-resume-card">
+          <a href="resume.pdf" target="_blank" class="resume-img-link">
+            <img src="images/photo/resume.png" alt="欧夏佚简历" class="resume-thumb">
+            <div class="resume-overlay">
+              <span>点击查看完整简历 →</span>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -97,35 +107,35 @@
   <section id="vibecoding" class="section vibecoding">
     <div class="section-container">
       <h2 class="section-title">Vibe Coding 作品</h2>
-      <p class="section-desc">以下作品均由我独立完成产品设计，并使用 AI 编程工具（Claude Code）亲手开发实现。</p>
+      <p class="section-desc">以下作品均由我独立完成产品设计，并使用 AI 编程工具（Claude Code）亲手开发实现。点击卡片下方链接可体验线上 Demo。</p>
 
       <div class="vibe-grid">
         <!-- 2.1 扒舞神器 -->
         <div class="vibe-card">
           <div class="vibe-card-img">
-            <div class="vibe-placeholder">
+            <img src="images/projects/bawu.jpg" alt="扒舞神器" class="vibe-img" onerror="this.style.display='none'">
+            <div class="vibe-placeholder" id="bawu-placeholder">
               <span class="placeholder-icon">💃</span>
-              <span class="placeholder-text">截图待补充</span>
+              <span class="placeholder-text">扒舞神器 · 产品截图</span>
             </div>
           </div>
           <div class="vibe-card-body">
-            <h3 class="vibe-card-title">Vive 扒舞神器</h3>
-            <p class="vibe-card-tagline">上传舞蹈视频 → AI 节拍检测 → 变速学舞工具</p>
+            <h3 class="vibe-card-title">扒舞神器</h3>
+            <p class="vibe-card-tagline">上传舞蹈视频 → AI 节拍检测 → 系统化拆解练习</p>
             <div class="vibe-card-section">
               <h4>📋 背景</h4>
-              <p>舞蹈学习者需要逐帧拆解动作，传统方式反复拖动进度条效率极低，缺乏按节拍拆解的专业工具。</p>
+              <p>舞蹈学习者看到喜欢的成品舞想自学，但肉眼很难一拍一拍数清楚动作，来回拖进度条又累又低效。</p>
             </div>
             <div class="vibe-card-section">
-              <h4>💡 解决的核心痛点</h4>
-              <p>自动检测音频节拍（BPM），将舞蹈按八拍自动分组，支持 0.5x–1.2x 无级变速播放和 AB 循环，让扒舞效率大幅提升。</p>
+              <h4>💡 解决的痛点</h4>
+              <p>自动提取音轨分析 BPM 和拍点时间轴，按 4/4 拍结构每 8 拍（两小节）自动分组，生成可视化"节拍网格"。每个拍点截一帧画面按 1-8 编号排版成幻灯片式分解图谱，搭配可调速（0.5–1.2x）+ 分段 AB 循环的播放器，把"反复拖进度条"变成"系统化拆解练习"。</p>
             </div>
             <div class="vibe-card-section">
               <h4>🔧 技术工具</h4>
-              <p>Claude Code · Web Audio API · Canvas · 纯前端无需后端</p>
+              <p>Claude Code · Web Audio API · Canvas · 纯前端</p>
             </div>
             <div class="vibe-card-footer">
-              <span class="vibe-qr-placeholder">[二维码待补充]</span>
-              <a href="#" class="vibe-link">体验 Demo →</a>
+              <a href="https://milletsoo.github.io/bawushenqi/" target="_blank" class="vibe-link">🔗 体验产品 →</a>
             </div>
           </div>
         </div>
@@ -133,29 +143,29 @@
         <!-- 2.2 CC 提醒插件 -->
         <div class="vibe-card">
           <div class="vibe-card-img">
-            <div class="vibe-placeholder">
+            <img src="images/projects/ccreminder.jpg" alt="CC提醒插件" class="vibe-img" onerror="this.style.display='none'">
+            <div class="vibe-placeholder" id="cc-placeholder">
               <span class="placeholder-icon">⏰</span>
-              <span class="placeholder-text">截图待补充</span>
+              <span class="placeholder-text">CC提醒插件 · 产品截图</span>
             </div>
           </div>
           <div class="vibe-card-body">
             <h3 class="vibe-card-title">Claude Code 提醒插件</h3>
-            <p class="vibe-card-tagline">飞书集成 · 智能日程管理 · 定时推送提醒</p>
+            <p class="vibe-card-tagline">再也不必守在 CC 窗口前等待 —— 权限请求 / 任务完成，实时弹窗通知</p>
             <div class="vibe-card-section">
               <h4>📋 背景</h4>
-              <p>日常工作中，重要事项容易被消息淹没。需要一个轻量级、无需切换平台的提醒工具。</p>
+              <p>用 Claude Code 进行 Vibe Coding 时，最大的痛点是不知道 CC 什么时候卡在了权限请求、什么时候生成了代码需要确认、什么时候任务完成。代码小白尤其看不懂 CC 在问什么权限，只能守在窗口前干等。</p>
             </div>
             <div class="vibe-card-section">
-              <h4>💡 解决的核心痛点</h4>
-              <p>通过飞书 API 集成，在 Claude Code 中一站式管理提醒任务，支持定时推送、日程同步、多人协作提醒。</p>
+              <h4>💡 解决的痛点</h4>
+              <p>制作了一个插件，在 CC 每次发出权限请求时自动弹窗通知，并把英文的技术性权限描述翻译成"大白话"，让代码小白也能一眼看懂 CC 在问什么、要不要同意。任务完成时也会推送通知，彻底解放等待时间。</p>
             </div>
             <div class="vibe-card-section">
               <h4>🔧 技术工具</h4>
-              <p>Claude Code · 飞书开放 API · Cron 定时任务</p>
+              <p>Claude Code Hooks · 飞书 API · 系统通知</p>
             </div>
             <div class="vibe-card-footer">
-              <span class="vibe-qr-placeholder">[二维码待补充]</span>
-              <a href="#" class="vibe-link">体验 Demo →</a>
+              <span class="vibe-link-disabled">🚧 本地工具，暂无线上 Demo</span>
             </div>
           </div>
         </div>
@@ -163,9 +173,10 @@
         <!-- 2.3 清理电脑 skill -->
         <div class="vibe-card">
           <div class="vibe-card-img">
+            <img src="images/projects/cleaner.jpg" alt="清理电脑" class="vibe-img" onerror="this.style.display='none'">
             <div class="vibe-placeholder">
               <span class="placeholder-icon">🧹</span>
-              <span class="placeholder-text">截图待补充</span>
+              <span class="placeholder-text">清理电脑 Skill · 产品截图</span>
             </div>
           </div>
           <div class="vibe-card-body">
@@ -176,16 +187,15 @@
               <p>电脑用久了临时文件、缓存、重复文件堆积，手动清理耗时且容易误删重要文件。</p>
             </div>
             <div class="vibe-card-section">
-              <h4>💡 解决的核心痛点</h4>
+              <h4>💡 解决的痛点</h4>
               <p>Claude Code 一键执行智能扫描，自动识别可安全删除的垃圾文件，按类别展示清理建议，用户确认后批量处理。</p>
             </div>
             <div class="vibe-card-section">
               <h4>🔧 技术工具</h4>
-              <p>Claude Code · Python 脚本 · 文件系统 API</p>
+              <p>Claude Code · Python 脚本</p>
             </div>
             <div class="vibe-card-footer">
-              <span class="vibe-qr-placeholder">[二维码待补充]</span>
-              <a href="#" class="vibe-link">体验 Demo →</a>
+              <span class="vibe-link-disabled">🚧 本地工具，暂无线上 Demo</span>
             </div>
           </div>
         </div>
@@ -193,9 +203,10 @@
         <!-- 2.4 生日提醒插件 -->
         <div class="vibe-card">
           <div class="vibe-card-img">
+            <img src="images/projects/birthday.jpg" alt="生日提醒" class="vibe-img" onerror="this.style.display='none'">
             <div class="vibe-placeholder">
               <span class="placeholder-icon">🎂</span>
-              <span class="placeholder-text">截图待补充</span>
+              <span class="placeholder-text">生日提醒插件 · 产品截图</span>
             </div>
           </div>
           <div class="vibe-card-body">
@@ -206,7 +217,7 @@
               <p>亲友生日靠脑子记容易忘，微信群发的祝福又显得不够用心。需要一个贴心的生日管家。</p>
             </div>
             <div class="vibe-card-section">
-              <h4>💡 解决的核心痛点</h4>
+              <h4>💡 解决的痛点</h4>
               <p>自动记录并管理亲友生日，提前 3 天/当天推送提醒，支持农历转换，一键生成个性化祝福语。</p>
             </div>
             <div class="vibe-card-section">
@@ -214,8 +225,7 @@
               <p>Claude Code · 飞书 API · 定时推送</p>
             </div>
             <div class="vibe-card-footer">
-              <span class="vibe-qr-placeholder">[二维码待补充]</span>
-              <a href="#" class="vibe-link">体验 Demo →</a>
+              <span class="vibe-link-disabled">🚧 本地工具，暂无线上 Demo</span>
             </div>
           </div>
         </div>
@@ -230,30 +240,33 @@
       <p class="section-desc">鼠标悬浮门扉，开启我的创作世界</p>
 
       <div class="doors-stage">
-        <!-- 5扇门，按距离排列，越远越透明 -->
+        <!-- 海报设计 -->
         <div class="door-wrapper" style="--door-index: 0;">
           <div class="door" data-category="海报设计">
             <div class="door-front">
               <span class="door-icon">🎨</span>
               <span class="door-label">海报设计</span>
-              <span class="door-hint">Hover 打开</span>
             </div>
             <div class="door-gallery">
-              <div class="gallery-placeholder">
-                <span class="gallery-icon">🖼</span>
-                <p>海报设计作品</p>
-                <p class="gallery-note">（图片待补充）</p>
+              <div class="gallery-grid">
+                <img src="images/design/poster/红色文创盒子总图.jpg" alt="红色文创盒子" class="gallery-img">
+                <img src="images/design/poster/成图-圣象.jpg" alt="圣象" class="gallery-img">
+                <img src="images/design/poster/成图-剑三.jpg" alt="剑三" class="gallery-img">
+                <img src="images/design/poster/成图-毓婷.jpg" alt="毓婷" class="gallery-img">
+                <img src="images/design/poster/爱华仕 山海天.jpg" alt="爱华仕山海天" class="gallery-img">
+                <img src="images/design/poster/爱华仕她他它.jpg" alt="爱华仕她他它" class="gallery-img">
+                <img src="images/design/poster/舒化-合集.jpg" alt="舒化合集" class="gallery-img">
               </div>
             </div>
           </div>
         </div>
 
+        <!-- 摄影 -->
         <div class="door-wrapper" style="--door-index: 1;">
           <div class="door" data-category="摄影">
             <div class="door-front">
               <span class="door-icon">📷</span>
               <span class="door-label">摄影</span>
-              <span class="door-hint">Hover 打开</span>
             </div>
             <div class="door-gallery">
               <div class="gallery-placeholder">
@@ -265,12 +278,12 @@
           </div>
         </div>
 
+        <!-- 摄像 -->
         <div class="door-wrapper" style="--door-index: 2;">
           <div class="door" data-category="摄像">
             <div class="door-front">
               <span class="door-icon">🎬</span>
               <span class="door-label">摄像</span>
-              <span class="door-hint">Hover 打开</span>
             </div>
             <div class="door-gallery">
               <div class="gallery-placeholder">
@@ -282,12 +295,12 @@
           </div>
         </div>
 
+        <!-- 动画制作 -->
         <div class="door-wrapper" style="--door-index: 3;">
           <div class="door" data-category="动画制作">
             <div class="door-front">
               <span class="door-icon">✨</span>
               <span class="door-label">动画制作</span>
-              <span class="door-hint">Hover 打开</span>
             </div>
             <div class="door-gallery">
               <div class="gallery-placeholder">
@@ -299,12 +312,12 @@
           </div>
         </div>
 
+        <!-- 3D建模 -->
         <div class="door-wrapper" style="--door-index: 4;">
           <div class="door" data-category="3D建模">
             <div class="door-front">
               <span class="door-icon">🧊</span>
               <span class="door-label">3D 建模</span>
-              <span class="door-hint">Hover 打开</span>
             </div>
             <div class="door-gallery">
               <div class="gallery-placeholder">
@@ -354,7 +367,6 @@
             <span class="comp-tag">网页开发</span>
             <span class="comp-tag">澎湃发布</span>
           </div>
-          <a href="#" class="comp-link">查看澎湃发布作品 →</a>
         </div>
       </div>
     </div>
@@ -369,24 +381,31 @@
       <div class="contact-grid">
         <div class="contact-info">
           <div class="contact-item">
-            <span class="contact-icon">📧</span>
+            <span class="contact-icon">📞</span>
             <div>
-              <p class="contact-label">邮箱</p>
-              <p class="contact-value">a19122341077@gmail.com</p>
+              <p class="contact-label">电话</p>
+              <p class="contact-value">19122341077</p>
             </div>
           </div>
           <div class="contact-item">
             <span class="contact-icon">💬</span>
             <div>
               <p class="contact-label">微信</p>
-              <p class="contact-value">ouxiaxi（备注来意）</p>
+              <p class="contact-value">o13696414029</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <p class="contact-label">邮箱</p>
+              <p class="contact-value">1305328948@qq.com</p>
             </div>
           </div>
           <div class="contact-item">
             <span class="contact-icon">📄</span>
             <div>
-              <p class="contact-label">简历下载</p>
-              <a href="#" class="contact-dl-btn">下载 PDF 简历</a>
+              <p class="contact-label">简历</p>
+              <a href="resume.pdf" target="_blank" class="contact-dl-btn">查看 / 下载简历 PDF</a>
             </div>
           </div>
         </div>
