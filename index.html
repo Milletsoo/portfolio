@@ -20,7 +20,6 @@
       <p class="hero-tags">能力：AI + 数据 + 洞察 + 审美 + 落地</p>
     </div>
 
-    <!-- 泡泡导航 — 4个，大小不一 -->
     <div class="bubbles-container">
       <div class="bubble bubble-sm bubble-1" data-target="about">
         <span class="bubble-title">个人简介</span>
@@ -31,7 +30,7 @@
         <span class="bubble-preview">个人独立用AI驱动<br>的产品样例</span>
       </div>
       <div class="bubble bubble-lg bubble-3" data-target="design-aesthetic">
-        <span class="bubble-title">设计与落地</span>
+        <span class="bubble-title">设计与技术</span>
         <span class="bubble-preview">海报·摄影·摄像<br>动画·3D建模</span>
       </div>
       <div class="bubble bubble-sm bubble-4" data-target="competition">
@@ -51,7 +50,6 @@
     <div class="section-container">
       <h2 class="section-title">个人简介</h2>
       <div class="about-grid about-grid-3col">
-        <!-- 教育背景 -->
         <div class="about-card">
           <h3 class="about-card-title">教育背景</h3>
           <div class="edu-item">
@@ -70,7 +68,6 @@
             </div>
           </div>
         </div>
-        <!-- 关于我 -->
         <div class="about-card">
           <h3 class="about-card-title">关于我</h3>
           <p class="about-text">
@@ -90,7 +87,6 @@
             <span class="skill-tag">视觉设计</span>
           </div>
         </div>
-        <!-- 简历图片 -->
         <div class="about-card about-resume-card">
           <a href="resume.pdf" target="_blank" class="resume-img-link">
             <img src="images/photo/resume.png" alt="欧夏佚简历" class="resume-thumb">
@@ -108,140 +104,85 @@
     <div class="section-container">
       <h2 class="section-title">Vibe Coding 作品</h2>
       <p class="section-desc">以下作品均由我独立完成产品设计，并使用 AI 编程工具（Claude Code）亲手开发实现。点击卡片下方链接可体验产品MVP。</p>
-
       <div class="vibe-grid">
         <!-- 2.1 扒舞神器 -->
         <div class="vibe-card">
           <div class="vibe-card-img">
             <img src="images/projects/bawu.jpg" alt="扒舞神器" class="vibe-img" onerror="this.style.display='none'">
-            <div class="vibe-placeholder" id="bawu-placeholder">
-              <span class="placeholder-icon">💃</span>
-              <span class="placeholder-text">扒舞神器 · 产品截图</span>
-            </div>
+            <div class="vibe-placeholder"><span class="placeholder-icon">💃</span><span class="placeholder-text">扒舞神器 · 产品截图</span></div>
           </div>
           <div class="vibe-card-body">
             <h3 class="vibe-card-title">扒舞神器</h3>
             <p class="vibe-card-tagline">上传舞蹈视频 → AI 节拍检测 → 系统化拆解练习</p>
-            <div class="vibe-card-section">
-              <h4>📋 背景</h4>
-              <p>舞蹈学习者看到喜欢的成品舞想自学，但肉眼很难一拍一拍数清楚动作，来回拖进度条又累又低效。</p>
-            </div>
-            <div class="vibe-card-section">
-              <h4>💡 解决的痛点</h4>
-              <p>自动提取音轨分析 BPM 和拍点时间轴，按 4/4 拍结构每 8 拍（两小节）自动分组，生成可视化"节拍网格"。每个拍点截一帧画面按 1-8 编号排版成幻灯片式分解图谱，搭配可调速（0.5–1.2x）+ 分段 AB 循环的播放器，把"反复拖进度条"变成"系统化拆解练习"。</p>
-            </div>
-            <div class="vibe-card-section">
-              <h4>🔧 技术工具</h4>
-              <p>Claude Code · Web Audio API · Canvas · 纯前端</p>
-            </div>
-            <div class="vibe-card-footer">
-              <a href="https://milletsoo.github.io/bawushenqi/" target="_blank" class="vibe-link">🔗 体验产品 →</a>
-            </div>
+            <div class="vibe-card-section"><h4>📋 背景</h4><p>舞蹈学习者看到喜欢的成品舞想自学，但肉眼很难一拍一拍数清楚动作，来回拖进度条又累又低效。</p></div>
+            <div class="vibe-card-section"><h4>💡 解决的痛点</h4><p>自动提取音轨分析 BPM 和拍点时间轴，按 4/4 拍结构每 8 拍自动分组，生成可视化"节拍网格"。每个拍点截一帧画面按 1-8 编号排版成幻灯片式分解图谱，搭配可调速（0.5–1.2x）+ 分段 AB 循环的播放器，把"反复拖进度条"变成"系统化拆解练习"。</p></div>
+            <div class="vibe-card-section"><h4>🔧 技术工具</h4><p>Claude Code · Web Audio API · Canvas · 纯前端</p></div>
+            <div class="vibe-card-footer"><a href="https://milletsoo.github.io/bawushenqi/" target="_blank" class="vibe-link">🔗 体验产品 →</a></div>
           </div>
         </div>
-
         <!-- 2.2 CC 提醒插件 -->
         <div class="vibe-card">
           <div class="vibe-card-img">
             <img src="images/projects/ccreminder.jpg" alt="CC提醒插件" class="vibe-img" onerror="this.style.display='none'">
-            <div class="vibe-placeholder" id="cc-placeholder">
-              <span class="placeholder-icon">⏰</span>
-              <span class="placeholder-text">CC提醒插件 · 产品截图</span>
-            </div>
+            <div class="vibe-placeholder"><span class="placeholder-icon">⏰</span><span class="placeholder-text">CC提醒插件 · 产品截图</span></div>
           </div>
           <div class="vibe-card-body">
             <h3 class="vibe-card-title">Claude Code 提醒插件</h3>
             <p class="vibe-card-tagline">再也不必守在 CC 窗口前等待 —— 权限请求 / 任务完成，实时弹窗通知</p>
-            <div class="vibe-card-section">
-              <h4>📋 背景</h4>
-              <p>用 Claude Code 进行 Vibe Coding 时，最大的痛点是不知道 CC 什么时候卡在了权限请求、什么时候生成了代码需要确认、什么时候任务完成。代码小白尤其看不懂 CC 在问什么权限，只能守在窗口前干等。</p>
-            </div>
-            <div class="vibe-card-section">
-              <h4>💡 解决的痛点</h4>
-              <p>制作了一个插件，在 CC 每次发出权限请求时自动弹窗通知，并把英文的技术性权限描述翻译成"大白话"，让代码小白也能一眼看懂 CC 在问什么、要不要同意。任务完成时也会推送通知，彻底解放等待时间。</p>
-            </div>
-            <div class="vibe-card-section">
-              <h4>🔧 技术工具</h4>
-              <p>Claude Code Hooks · 飞书 API · 系统通知</p>
-            </div>
-            <div class="vibe-card-footer">
-              <span class="vibe-link-disabled">🚧 本地工具，暂无线上 Demo</span>
-            </div>
+            <div class="vibe-card-section"><h4>📋 背景</h4><p>用 Claude Code 进行 Vibe Coding 时，最大的痛点是不知道 CC 什么时候卡在了权限请求、什么时候任务完成。代码小白尤其看不懂 CC 在问什么权限，只能守在窗口前干等。</p></div>
+            <div class="vibe-card-section"><h4>💡 解决的痛点</h4><p>制作了一个插件，在 CC 每次发出权限请求时自动弹窗通知，并把英文的技术性权限描述翻译成"大白话"，让代码小白也能一眼看懂 CC 在问什么、要不要同意。任务完成时也会推送通知，彻底解放等待时间。</p></div>
+            <div class="vibe-card-section"><h4>🔧 技术工具</h4><p>Claude Code Hooks · 飞书 API · 系统通知</p></div>
+            <div class="vibe-card-footer"><span class="vibe-link-disabled">🚧 本地工具，暂无线上 Demo</span></div>
           </div>
         </div>
-
         <!-- 2.3 清理电脑 skill -->
         <div class="vibe-card">
           <div class="vibe-card-img">
             <img src="images/projects/cleaner.jpg" alt="清理电脑" class="vibe-img" onerror="this.style.display='none'">
-            <div class="vibe-placeholder">
-              <span class="placeholder-icon">🧹</span>
-              <span class="placeholder-text">清理电脑 Skill · 产品截图</span>
-            </div>
+            <div class="vibe-placeholder"><span class="placeholder-icon">🧹</span><span class="placeholder-text">清理电脑 Skill · 产品截图</span></div>
           </div>
           <div class="vibe-card-body">
             <h3 class="vibe-card-title">清理电脑 Skill</h3>
             <p class="vibe-card-tagline">一键清理垃圾文件 · 智能分类整理 · 释放磁盘空间</p>
-            <div class="vibe-card-section">
-              <h4>📋 背景</h4>
-              <p>电脑用久了临时文件、缓存、重复文件堆积，手动清理耗时且容易误删重要文件。</p>
-            </div>
-            <div class="vibe-card-section">
-              <h4>💡 解决的痛点</h4>
-              <p>Claude Code 一键执行智能扫描，自动识别可安全删除的垃圾文件，按类别展示清理建议，用户确认后批量处理。</p>
-            </div>
-            <div class="vibe-card-section">
-              <h4>🔧 技术工具</h4>
-              <p>Claude Code · Python 脚本</p>
-            </div>
-            <div class="vibe-card-footer">
-              <span class="vibe-link-disabled">🚧 本地工具，暂无线上 Demo</span>
-            </div>
+            <div class="vibe-card-section"><h4>📋 背景</h4><p>电脑用久了临时文件、缓存、重复文件堆积，手动清理耗时且容易误删重要文件。</p></div>
+            <div class="vibe-card-section"><h4>💡 解决的痛点</h4><p>Claude Code 一键执行智能扫描，自动识别可安全删除的垃圾文件，按类别展示清理建议，用户确认后批量处理。</p></div>
+            <div class="vibe-card-section"><h4>🔧 技术工具</h4><p>Claude Code · Python 脚本</p></div>
+            <div class="vibe-card-footer"><span class="vibe-link-disabled">🚧 本地工具，暂无线上 Demo</span></div>
           </div>
         </div>
-
         <!-- 2.4 生日提醒插件 -->
         <div class="vibe-card">
           <div class="vibe-card-img">
             <img src="images/projects/birthday.jpg" alt="生日提醒" class="vibe-img" onerror="this.style.display='none'">
-            <div class="vibe-placeholder">
-              <span class="placeholder-icon">🎂</span>
-              <span class="placeholder-text">生日提醒插件 · 产品截图</span>
-            </div>
+            <div class="vibe-placeholder"><span class="placeholder-icon">🎂</span><span class="placeholder-text">生日提醒插件 · 产品截图</span></div>
           </div>
           <div class="vibe-card-body">
             <h3 class="vibe-card-title">生日提醒插件</h3>
             <p class="vibe-card-tagline">亲友生日管理 · 提前提醒 · 再也不会忘记重要日子</p>
-            <div class="vibe-card-section">
-              <h4>📋 背景</h4>
-              <p>亲友生日靠脑子记容易忘，微信群发的祝福又显得不够用心。需要一个贴心的生日管家。</p>
-            </div>
-            <div class="vibe-card-section">
-              <h4>💡 解决的痛点</h4>
-              <p>自动记录并管理亲友生日，提前 3 天/当天推送提醒，支持农历转换，一键生成个性化祝福语。</p>
-            </div>
-            <div class="vibe-card-section">
-              <h4>🔧 技术工具</h4>
-              <p>Claude Code · 飞书 API · 定时推送</p>
-            </div>
-            <div class="vibe-card-footer">
-              <span class="vibe-link-disabled">🚧 本地工具，暂无线上 Demo</span>
-            </div>
+            <div class="vibe-card-section"><h4>📋 背景</h4><p>亲友生日靠脑子记容易忘，微信群发的祝福又显得不够用心。需要一个贴心的生日管家。</p></div>
+            <div class="vibe-card-section"><h4>💡 解决的痛点</h4><p>自动记录并管理亲友生日，提前 3 天/当天推送提醒，支持农历转换，一键生成个性化祝福语。</p></div>
+            <div class="vibe-card-section"><h4>🔧 技术工具</h4><p>Claude Code · 飞书 API · 定时推送</p></div>
+            <div class="vibe-card-footer"><span class="vibe-link-disabled">🚧 本地工具，暂无线上 Demo</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== 3. 设计与落地 — 门动画长廊 ==================== -->
+  <!-- ==================== 3. 设计与技术 — 门动画 v2 ==================== -->
   <section id="design-aesthetic" class="section design-aesthetic">
     <div class="section-container">
-      <h2 class="section-title">设计与落地</h2>
+      <h2 class="section-title">设计与技术</h2>
       <p class="section-desc">鼠标悬浮门扉，开启我的创作世界</p>
 
       <div class="doors-stage">
+
         <!-- 海报设计 -->
         <div class="door-wrapper" style="--door-index: 0;">
+          <div class="door-front" data-door="poster">
+            <span class="door-icon">🎨</span>
+            <span class="door-label">海报设计</span>
+          </div>
           <div class="door-gallery">
             <div class="gallery-grid">
               <img src="images/design/poster/红色文创盒子总图.jpg" alt="红色文创盒子" class="gallery-img" loading="lazy">
@@ -253,69 +194,57 @@
               <img src="images/design/poster/舒化-合集.jpg" alt="舒化合集" class="gallery-img" loading="lazy">
             </div>
           </div>
-          <div class="door-front">
-            <span class="door-icon">🎨</span>
-            <span class="door-label">海报设计</span>
-          </div>
         </div>
 
         <!-- 摄影 -->
         <div class="door-wrapper" style="--door-index: 1;">
-          <div class="door-gallery">
-            <div class="gallery-placeholder">
-              <span class="gallery-icon">📸</span>
-              <p>摄影作品</p>
-              <p class="gallery-note">（图片待补充）</p>
-            </div>
-          </div>
-          <div class="door-front">
+          <div class="door-front" data-door="photo">
             <span class="door-icon">📷</span>
             <span class="door-label">摄影</span>
+          </div>
+          <div class="door-gallery">
+            <div class="gallery-placeholder">
+              <span class="gallery-icon">📸</span><p>摄影作品</p><p class="gallery-note">（图片待补充）</p>
+            </div>
           </div>
         </div>
 
         <!-- 摄像 -->
         <div class="door-wrapper" style="--door-index: 2;">
-          <div class="door-gallery">
-            <div class="gallery-placeholder">
-              <span class="gallery-icon">🎥</span>
-              <p>视频作品</p>
-              <p class="gallery-note">（图片待补充）</p>
-            </div>
-          </div>
-          <div class="door-front">
+          <div class="door-front" data-door="video">
             <span class="door-icon">🎬</span>
             <span class="door-label">摄像</span>
+          </div>
+          <div class="door-gallery">
+            <div class="gallery-placeholder">
+              <span class="gallery-icon">🎥</span><p>视频作品</p><p class="gallery-note">（图片待补充）</p>
+            </div>
           </div>
         </div>
 
         <!-- 动画制作 -->
         <div class="door-wrapper" style="--door-index: 3;">
-          <div class="door-gallery">
-            <div class="gallery-placeholder">
-              <span class="gallery-icon">🎞</span>
-              <p>动画作品</p>
-              <p class="gallery-note">（图片待补充）</p>
-            </div>
-          </div>
-          <div class="door-front">
+          <div class="door-front" data-door="animation">
             <span class="door-icon">✨</span>
             <span class="door-label">动画制作</span>
+          </div>
+          <div class="door-gallery">
+            <div class="gallery-placeholder">
+              <span class="gallery-icon">🎞</span><p>动画作品</p><p class="gallery-note">（图片待补充）</p>
+            </div>
           </div>
         </div>
 
         <!-- 3D建模 -->
         <div class="door-wrapper" style="--door-index: 4;">
-          <div class="door-gallery">
-            <div class="gallery-placeholder">
-              <span class="gallery-icon">🗿</span>
-              <p>3D 建模作品</p>
-              <p class="gallery-note">（图片待补充）</p>
-            </div>
-          </div>
-          <div class="door-front">
+          <div class="door-front" data-door="3d">
             <span class="door-icon">🧊</span>
             <span class="door-label">3D 建模</span>
+          </div>
+          <div class="door-gallery">
+            <div class="gallery-placeholder">
+              <span class="gallery-icon">🗿</span><p>3D 建模作品</p><p class="gallery-note">（图片待补充）</p>
+            </div>
           </div>
         </div>
       </div>
@@ -327,36 +256,20 @@
   <section id="competition" class="section competition">
     <div class="section-container">
       <h2 class="section-title">比赛项目</h2>
-
       <div class="comp-grid">
         <div class="comp-card">
           <div class="comp-badge">🏆 国家级一等奖</div>
           <h3 class="comp-title">中国大学生计算机设计大赛</h3>
           <p class="comp-role">队长 · 统筹策划 · 动画美工 · 路演答辩</p>
-          <p class="comp-desc">
-            制作多媒体微课作品，从校级前三到北京市一等奖，最终斩获国家级一等奖（A类学科竞赛）。
-          </p>
-          <div class="comp-tags">
-            <span class="comp-tag">统筹策划</span>
-            <span class="comp-tag">动画制作</span>
-            <span class="comp-tag">路演答辩</span>
-            <span class="comp-tag">团队管理</span>
-          </div>
+          <p class="comp-desc">制作多媒体微课作品，从校级前三到北京市一等奖，最终斩获国家级一等奖（A类学科竞赛）。</p>
+          <div class="comp-tags"><span class="comp-tag">统筹策划</span><span class="comp-tag">动画制作</span><span class="comp-tag">路演答辩</span><span class="comp-tag">团队管理</span></div>
         </div>
-
         <div class="comp-card">
           <div class="comp-badge">📊 国家级三等奖</div>
           <h3 class="comp-title">中国数据新闻大赛</h3>
           <p class="comp-role">数据采集 · 可视化设计 · 网站搭建</p>
-          <p class="comp-desc">
-            以"选调生"为主题，独立搭建数据新闻网站，完成数据爬虫采集与可视化呈现。作品发表于澎湃·有数平台。
-          </p>
-          <div class="comp-tags">
-            <span class="comp-tag">数据爬虫</span>
-            <span class="comp-tag">可视化</span>
-            <span class="comp-tag">网页开发</span>
-            <span class="comp-tag">澎湃发布</span>
-          </div>
+          <p class="comp-desc">以"选调生"为主题，独立搭建数据新闻网站，完成数据爬虫采集与可视化呈现。作品发表于澎湃·有数平台。</p>
+          <div class="comp-tags"><span class="comp-tag">数据爬虫</span><span class="comp-tag">可视化</span><span class="comp-tag">网页开发</span><span class="comp-tag">澎湃发布</span></div>
         </div>
       </div>
     </div>
@@ -367,47 +280,19 @@
     <div class="section-container">
       <h2 class="section-title">联系我</h2>
       <p class="section-desc">期待与你交流，欢迎通过以下方式找到我</p>
-
       <div class="contact-grid">
         <div class="contact-info">
-          <div class="contact-item">
-            <span class="contact-icon">📞</span>
-            <div>
-              <p class="contact-label">电话</p>
-              <p class="contact-value">19122341077</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">💬</span>
-            <div>
-              <p class="contact-label">微信</p>
-              <p class="contact-value">o13696414029</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">📧</span>
-            <div>
-              <p class="contact-label">邮箱</p>
-              <p class="contact-value">1305328948@qq.com</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">📄</span>
-            <div>
-              <p class="contact-label">简历</p>
-              <a href="resume.pdf" target="_blank" class="contact-dl-btn">查看 / 下载简历 PDF</a>
-            </div>
-          </div>
+          <div class="contact-item"><span class="contact-icon">📞</span><div><p class="contact-label">电话</p><p class="contact-value">19122341077</p></div></div>
+          <div class="contact-item"><span class="contact-icon">💬</span><div><p class="contact-label">微信</p><p class="contact-value">o13696414029</p></div></div>
+          <div class="contact-item"><span class="contact-icon">📧</span><div><p class="contact-label">邮箱</p><p class="contact-value">1305328948@qq.com</p></div></div>
+          <div class="contact-item"><span class="contact-icon">📄</span><div><p class="contact-label">简历</p><a href="resume.pdf" target="_blank" class="contact-dl-btn">查看 / 下载简历 PDF</a></div></div>
         </div>
         <div class="contact-qr">
           <div id="qrcode" class="qr-code"></div>
           <p class="qr-hint">扫码查看作品集</p>
         </div>
       </div>
-
-      <footer class="footer">
-        <p>© 2026 欧夏佚 · 保持创作，热爱生活</p>
-      </footer>
+      <footer class="footer"><p>© 2026 欧夏佚 · 保持创作，热爱生活</p></footer>
     </div>
   </section>
 
