@@ -299,7 +299,23 @@ body {
 
 /* ====== 竖屏：门向上压缩，画廊向下展开 ====== */
 @media (orientation: portrait) {
-  .doors-stage { height: 360px; }
+  .doors-stage {
+    height: auto;
+    min-height: 500px;
+    flex-direction: column;
+  }
+
+  /* 未激活的门自动收缩 */
+  .door-wrapper {
+    flex: 0 0 auto;
+    min-height: 80px;
+  }
+
+  /* 激活的门撑大 */
+  .door-wrapper.door-open {
+    flex: 0 0 75vh;
+    min-height: 400px;
+  }
 
   .door-wrapper.door-open .door-front {
     width: auto;
@@ -375,12 +391,11 @@ body {
   .about-grid-3col { grid-template-columns: 1fr; }
   .vibe-grid, .comp-grid { grid-template-columns: 1fr; }
 
-  .doors-stage { flex-direction: column; height: auto; gap: 10px; }
-  .door-wrapper { min-height: 90px; }
+  .doors-stage { flex-direction: column; height: auto; min-height: 400px; gap: 10px; }
+  .door-wrapper { min-height: 80px; flex: 0 0 auto; }
+  .door-wrapper.door-open { flex: 0 0 65vh; min-height: 360px; }
   .door-front { border-radius: var(--radius); }
-  .door-wrapper:hover .door-front,
   .door-wrapper.door-open .door-front { height: 44px; width: auto; left: 0; right: 0; top: 0; bottom: auto; border-radius: var(--radius) var(--radius) 0 0; }
-  .door-wrapper:hover .door-gallery,
   .door-wrapper.door-open .door-gallery { top: 44px; left: 0; right: 0; bottom: 0; }
 
   .contact-grid { grid-template-columns: 1fr; text-align: center; }
