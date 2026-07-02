@@ -108,61 +108,58 @@
         <!-- 2.1 扒舞神器 -->
         <div class="vibe-card">
           <div class="vibe-card-img">
-            <img src="images/projects/bawu.jpg" alt="扒舞神器" class="vibe-img" onerror="this.style.display='none'">
-            <div class="vibe-placeholder"><span class="placeholder-icon">💃</span><span class="placeholder-text">扒舞神器 · 产品截图</span></div>
+            <img src="images/projects/扒舞神器截图.png" alt="扒舞神器" class="vibe-img">
           </div>
           <div class="vibe-card-body">
             <h3 class="vibe-card-title">扒舞神器</h3>
             <p class="vibe-card-tagline">上传舞蹈视频 → AI 节拍检测 → 系统化拆解练习</p>
             <div class="vibe-card-section"><h4>📋 背景</h4><p>舞蹈学习者看到喜欢的成品舞想自学，但肉眼很难一拍一拍数清楚动作，来回拖进度条又累又低效。</p></div>
             <div class="vibe-card-section"><h4>💡 解决的痛点</h4><p>自动提取音轨分析 BPM 和拍点时间轴，按 4/4 拍结构每 8 拍自动分组，生成可视化"节拍网格"。每个拍点截一帧画面按 1-8 编号排版成幻灯片式分解图谱，搭配可调速（0.5–1.2x）+ 分段 AB 循环的播放器，把"反复拖进度条"变成"系统化拆解练习"。</p></div>
-            <div class="vibe-card-section"><h4>🔧 技术工具</h4><p>Claude Code · Web Audio API · Canvas · 纯前端</p></div>
-            <div class="vibe-card-footer"><a href="https://milletsoo.github.io/bawushenqi/" target="_blank" class="vibe-link">🔗 体验产品 →</a></div>
+            <div class="vibe-card-section"><h4>🔧 技术工具</h4><p>Claude Code · Web Audio API · HTML</p></div>
+            <div class="vibe-card-footer vibe-footer-active"><a href="https://milletsoo.github.io/bawushenqi/" target="_blank" class="vibe-link">点击体验产品 →</a></div>
           </div>
         </div>
         <!-- 2.2 CC 提醒插件 -->
         <div class="vibe-card">
-          <div class="vibe-card-img">
-            <img src="images/projects/ccreminder.jpg" alt="CC提醒插件" class="vibe-img" onerror="this.style.display='none'">
-            <div class="vibe-placeholder"><span class="placeholder-icon">⏰</span><span class="placeholder-text">CC提醒插件 · 产品截图</span></div>
+          <div class="vibe-card-img vibe-card-img-stack">
+            <img src="images/projects/cc插件截图1.png" alt="CC提醒1" class="vibe-img-stack">
+            <img src="images/projects/cc插件截图２.png" alt="CC提醒2" class="vibe-img-stack">
           </div>
           <div class="vibe-card-body">
             <h3 class="vibe-card-title">Claude Code 提醒插件</h3>
             <p class="vibe-card-tagline">再也不必守在 CC 窗口前等待 —— 权限请求 / 任务完成，实时弹窗通知</p>
             <div class="vibe-card-section"><h4>📋 背景</h4><p>用 Claude Code 进行 Vibe Coding 时，最大的痛点是不知道 CC 什么时候卡在了权限请求、什么时候任务完成。代码小白尤其看不懂 CC 在问什么权限，只能守在窗口前干等。</p></div>
             <div class="vibe-card-section"><h4>💡 解决的痛点</h4><p>制作了一个插件，在 CC 每次发出权限请求时自动弹窗通知，并把英文的技术性权限描述翻译成"大白话"，让代码小白也能一眼看懂 CC 在问什么、要不要同意。任务完成时也会推送通知，彻底解放等待时间。</p></div>
-            <div class="vibe-card-section"><h4>🔧 技术工具</h4><p>Claude Code Hooks · 飞书 API · 系统通知</p></div>
-            <div class="vibe-card-footer"><span class="vibe-link-disabled">🚧 本地工具，暂无线上 Demo</span></div>
+            <div class="vibe-card-section"><h4>🔧 技术工具</h4><p>Claude Code Hooks · 脚本 · 插件</p></div>
+            <div class="vibe-card-footer vibe-footer-active"><a href="https://github.com/Milletsoo/cc-float-notify" target="_blank" class="vibe-link">点击下载插件 →</a></div>
           </div>
         </div>
         <!-- 2.3 清理电脑 skill -->
         <div class="vibe-card">
           <div class="vibe-card-img">
-            <img src="images/projects/cleaner.jpg" alt="清理电脑" class="vibe-img" onerror="this.style.display='none'">
-            <div class="vibe-placeholder"><span class="placeholder-icon">🧹</span><span class="placeholder-text">清理电脑 Skill · 产品截图</span></div>
+            <img src="images/projects/清理电脑skill截图.jpg" alt="清理电脑" class="vibe-img">
           </div>
           <div class="vibe-card-body">
             <h3 class="vibe-card-title">清理电脑 Skill</h3>
-            <p class="vibe-card-tagline">一键清理垃圾文件 · 智能分类整理 · 释放磁盘空间</p>
-            <div class="vibe-card-section"><h4>📋 背景</h4><p>电脑用久了临时文件、缓存、重复文件堆积，手动清理耗时且容易误删重要文件。</p></div>
-            <div class="vibe-card-section"><h4>💡 解决的痛点</h4><p>Claude Code 一键执行智能扫描，自动识别可安全删除的垃圾文件，按类别展示清理建议，用户确认后批量处理。</p></div>
-            <div class="vibe-card-section"><h4>🔧 技术工具</h4><p>Claude Code · Python 脚本</p></div>
-            <div class="vibe-card-footer"><span class="vibe-link-disabled">🚧 本地工具，暂无线上 Demo</span></div>
+            <p class="vibe-card-tagline">小白也能安全清理电脑 —— AI 深度扫描 · 高风险预警 · 一键释放空间</p>
+            <div class="vibe-card-section"><h4>📋 背景</h4><p>电脑小白不懂电脑环境，下载软件后经常被连带安装垃圾软件，安装好后也不知道需要删除安装包来节省空间。时间一长，电脑越来越卡，却不敢随便删东西——怕误删重要文件。</p></div>
+            <div class="vibe-card-section"><h4>💡 解决的痛点</h4><p>用 Claude Code 的 Skill 功能，一句话就能让 AI 深度扫描电脑中的临时文件、缓存、重复文件和残留安装包。智能分类展示清理建议，并对高风险操作发出预警，防止误删重要文件。像有个懂电脑的朋友在旁边帮你把关。</p></div>
+            <div class="vibe-card-section"><h4>🔧 技术工具</h4><p>Claude Code · Skill</p></div>
+            <div class="vibe-card-footer vibe-footer-active"><a href="https://github.com/Milletsoo/clean-computer-skill" target="_blank" class="vibe-link">点击下载插件 →</a></div>
           </div>
         </div>
         <!-- 2.4 生日提醒插件 -->
         <div class="vibe-card">
           <div class="vibe-card-img">
-            <img src="images/projects/birthday.jpg" alt="生日提醒" class="vibe-img" onerror="this.style.display='none'">
-            <div class="vibe-placeholder"><span class="placeholder-icon">🎂</span><span class="placeholder-text">生日提醒插件 · 产品截图</span></div>
+            <img src="images/projects/生日提醒截图.jpg" alt="生日提醒" class="vibe-img">
           </div>
           <div class="vibe-card-body">
             <h3 class="vibe-card-title">生日提醒插件</h3>
             <p class="vibe-card-tagline">亲友生日管理 · 提前提醒 · 再也不会忘记重要日子</p>
             <div class="vibe-card-section"><h4>📋 背景</h4><p>亲友生日靠脑子记容易忘，微信群发的祝福又显得不够用心。需要一个贴心的生日管家。</p></div>
             <div class="vibe-card-section"><h4>💡 解决的痛点</h4><p>自动记录并管理亲友生日，提前 3 天/当天推送提醒，支持农历转换，一键生成个性化祝福语。</p></div>
-            <div class="vibe-card-section"><h4>🔧 技术工具</h4><p>Claude Code · 飞书 API · 定时推送</p></div>
-            <div class="vibe-card-footer"><span class="vibe-link-disabled">🚧 本地工具，暂无线上 Demo</span></div>
+            <div class="vibe-card-section"><h4>🔧 技术工具</h4><p>Claude Code · Dart · Flutter App</p></div>
+            <div class="vibe-card-footer"><span class="vibe-link-disabled">APP 审核开发中</span></div>
           </div>
         </div>
       </div>
@@ -220,8 +217,27 @@
             <span class="door-label">摄像</span>
           </div>
           <div class="door-gallery">
-            <div class="gallery-placeholder">
-              <span class="gallery-icon">🎥</span><p>视频作品</p><p class="gallery-note">（待确定上传方案）</p>
+            <div class="gallery-grid">
+              <!-- 广告片 -->
+              <div class="video-card">
+                <img src="images/design/video/广告片封面.png" alt="广告片封面" class="video-cover">
+                <h4>广告片《Sensitive》</h4>
+                <p class="video-note">杰士邦品牌广告片</p>
+                <a href="https://www.bilibili.com/video/BV16FTE66EZ1/" target="_blank" class="comp-link">点击查看作品视频 →</a>
+                <div class="video-iframe-wrap">
+                  <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=116850524424491&bvid=BV16FTE66EZ1&cid=39594692350&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="video-iframe"></iframe>
+                </div>
+              </div>
+              <!-- 微电影 -->
+              <div class="video-card">
+                <img src="images/design/video/微电影封面.png" alt="微电影封面" class="video-cover">
+                <h4>微电影《问桥在何方》</h4>
+                <p class="video-note">原创微电影作品</p>
+                <a href="https://www.bilibili.com/video/BV1rFTE66EE1/" target="_blank" class="comp-link">点击查看作品视频 →</a>
+                <div class="video-iframe-wrap">
+                  <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=116850524423843&bvid=BV1rFTE66EE1&cid=39594757058&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="video-iframe"></iframe>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -272,7 +288,7 @@
               <p class="comp-role">队长 · 统筹策划 · 动画美工 · 路演答辩</p>
               <p class="comp-desc">运用MG动画介绍诗人生平、HTML5 互动小游戏、数字人老师形象讲解等多种技术制作多媒体微课作品，并投入真实课堂进行实践。从校级前三到北京市一等奖，最终斩获国家级一等奖（A类学科竞赛）。</p>
               <div class="comp-tags"><span class="comp-tag">统筹策划</span><span class="comp-tag">MG动画</span><span class="comp-tag">H5互动</span><span class="comp-tag">数字人</span><span class="comp-tag">路演答辩</span></div>
-              <a href="https://www.bilibili.com/video/BV1iX4y1s7Yv/?vd_source=42d0d4a074c275e2b662bc1d68e7ef90" target="_blank" class="comp-link">🎬 查看作品视频 →</a>
+              <a href="https://www.bilibili.com/video/BV1iX4y1s7Yv/?vd_source=42d0d4a074c275e2b662bc1d68e7ef90" target="_blank" class="comp-link">🎬 点击查看作品视频 →</a>
             </div>
             <div class="comp-card-gallery">
               <img src="images/competition/computer/mg动画.png" alt="MG动画" class="gallery-img" loading="lazy">
@@ -292,7 +308,7 @@
               <p class="comp-role">数据采集 · 可视化设计 · 网站搭建</p>
               <p class="comp-desc">以"选调生"为主题，独立搭建数据新闻网站，完成数据爬虫采集与可视化呈现。作品发表于澎湃·有数平台。</p>
               <div class="comp-tags"><span class="comp-tag">数据爬虫</span><span class="comp-tag">可视化</span><span class="comp-tag">网页开发</span><span class="comp-tag">澎湃发布</span></div>
-              <a href="https://jiayi917666.wixsite.com/pets" target="_blank" class="comp-link">🌐 查看作品网站 →</a>
+              <a href="https://jiayi917666.wixsite.com/pets" target="_blank" class="comp-link">🌐 点击查看作品网站 →</a>
             </div>
             <div class="comp-card-gallery">
               <img src="images/competition/datanews/数据新闻大赛1.png" alt="数据新闻1" class="gallery-img" loading="lazy">

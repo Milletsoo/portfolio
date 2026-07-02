@@ -215,6 +215,88 @@ body {
 .vibe-link:hover { color: var(--navy-light); text-decoration: underline; }
 .vibe-link-disabled { font-size: 0.85rem; color: var(--text-light); font-family: var(--font-body); }
 
+/* 活跃链接底部栏 — 重色突出 */
+.vibe-footer-active {
+  background: var(--navy);
+  border-top: none;
+  text-align: center;
+  padding: 14px 24px !important;
+  margin-top: 18px;
+}
+
+.vibe-footer-active .vibe-link {
+  color: var(--white);
+  font-size: 0.95rem;
+}
+
+.vibe-footer-active .vibe-link:hover {
+  color: var(--gray-blue);
+  text-decoration: none;
+}
+
+/* CC提醒插件双图叠放 */
+.vibe-card-img-stack {
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: auto;
+}
+
+.vibe-img-stack {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  flex: 1;
+  min-height: 0;
+}
+
+/* ---------- 视频卡片 ---------- */
+.video-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 16px;
+  border: 1px solid var(--gray-blue);
+}
+
+.video-card h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--navy);
+  margin: 10px 0 4px;
+  font-size: 1rem;
+}
+
+.video-note {
+  font-size: 0.82rem;
+  color: var(--text-mid);
+  margin-bottom: 10px;
+}
+
+.video-cover {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+.video-iframe-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin-top: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 /* =====================================
    设计与技术 — 门画廊 v2（JS驱动开关）
    ===================================== */
