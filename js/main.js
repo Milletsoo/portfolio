@@ -4,14 +4,14 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-  // ==================== 泡泡导航：点击平滑滚动 ====================
-  const bubbles = document.querySelectorAll('.bubble');
+  // ==================== 泡泡导航 ====================
+  var bubbles = document.querySelectorAll('.bubble');
 
-  bubbles.forEach(bubble => {
+  bubbles.forEach(function(bubble) {
     bubble.addEventListener('click', function(e) {
       e.preventDefault();
-      const targetId = this.getAttribute('data-target');
-      const target = document.getElementById(targetId);
+      var targetId = this.getAttribute('data-target');
+      var target = document.getElementById(targetId);
       if (target) {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
@@ -19,17 +19,17 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // ==================== 滚动渐入动画 ====================
-  const revealElements = document.querySelectorAll(
+  var revealElements = document.querySelectorAll(
     '.about-card, .vibe-card, .comp-card, .door-wrapper'
   );
 
-  const observerOptions = {
+  var observerOptions = {
     root: null,
     rootMargin: '0px 0px -60px 0px',
     threshold: 0.12
   };
 
-  const revealObserver = new IntersectionObserver(function(entries) {
+  var revealObserver = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
         entry.target.style.opacity = '1';
@@ -46,14 +46,11 @@ document.addEventListener('DOMContentLoaded', function() {
     revealObserver.observe(el);
   });
 
-  // ==================== 门动画：点击扩展画廊 ====================
-  const doors = document.querySelectorAll('.door');
+  // ==================== 门：点击保持打开 ====================
+  var doorFronts = document.querySelectorAll('.door-front');
 
-  doors.forEach(function(door) {
-    // Hover 时门的旋转动画由 CSS :hover 处理
-
-    // Click：保持门打开状态，显示完整画廊
-    door.addEventListener('click', function(e) {
+  doorFronts.forEach(function(dfront) {
+    dfront.addEventListener('click', function(e) {
       e.stopPropagation();
 
       // 如果已经打开，就关闭
@@ -63,17 +60,17 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       // 关闭其他门
-      doors.forEach(function(d) { d.classList.remove('door-open'); });
+      doorFronts.forEach(function(d) { d.classList.remove('door-open'); });
 
-      // 打开当前门
+      // 打开当前门（全开）
       this.classList.add('door-open');
     });
   });
 
-  // 点击空白区域关闭所有门
+  // 点击空白关闭所有门
   document.addEventListener('click', function(e) {
-    if (!e.target.closest('.door')) {
-      doors.forEach(function(d) { d.classList.remove('door-open'); });
+    if (!e.target.closest('.door-front')) {
+      doorFronts.forEach(function(d) { d.classList.remove('door-open'); });
     }
   });
 
@@ -89,22 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
       correctLevel: QRCode.CorrectLevel.M
     });
   } else if (qrContainer) {
-    // 如果 QRCode 库未加载，显示提示
     qrContainer.innerHTML = '<span style="font-size:0.8rem;color:#8B95A5;">二维码<br>待生成</span>';
   }
-
-  // ==================== 泡泡 hover 预览的触摸支持 ====================
-  bubbles.forEach(function(bubble) {
-    bubble.addEventListener('touchstart', function() {
-      this.classList.add('bubble-touch');
-    }, { passive: true });
-
-    bubble.addEventListener('touchend', function() {
-      var self = this;
-      setTimeout(function() {
-        self.classList.remove('bubble-touch');
-      }, 1500);
-    });
-  });
 
 });

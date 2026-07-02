@@ -25,6 +25,11 @@
   --font-heading: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
   --font-body: "Songti SC", "SimSun", "Noto Serif SC", "Georgia", serif;
   --max-width: 960px;
+  /* 泡泡大小变量 — PC端用vw，手机端覆盖为px */
+  --bubble-sm: 13vw;
+  --bubble-lg: 17vw;
+  --bubble-sm-hover: 15vw;
+  --bubble-lg-hover: 19vw;
 }
 
 html { scroll-behavior: smooth; }
@@ -113,7 +118,7 @@ body {
   letter-spacing: 0.06em;
 }
 
-/* ---------- Bubbles (4个) ---------- */
+/* ---------- Bubbles (4个，大小不一) ---------- */
 .bubbles-container {
   position: absolute;
   inset: 0;
@@ -123,8 +128,6 @@ body {
 
 .bubble {
   position: absolute;
-  width: 130px;
-  height: 130px;
   border-radius: 50%;
   background: rgba(255,255,255,0.75);
   backdrop-filter: blur(16px);
@@ -144,15 +147,35 @@ body {
   animation: float 6s ease-in-out infinite;
 }
 
+/* 小泡泡：个人简介 / 比赛项目 */
+.bubble-sm {
+  width: var(--bubble-sm);
+  height: var(--bubble-sm);
+}
+
+.bubble-sm:hover {
+  width: var(--bubble-sm-hover);
+  height: var(--bubble-sm-hover);
+}
+
+/* 大泡泡：Vibe Coding / 设计与落地 */
+.bubble-lg {
+  width: var(--bubble-lg);
+  height: var(--bubble-lg);
+}
+
+.bubble-lg:hover {
+  width: var(--bubble-lg-hover);
+  height: var(--bubble-lg-hover);
+}
+
 .bubble:nth-child(1) { animation-delay: 0s; }
 .bubble:nth-child(2) { animation-delay: -1.5s; }
 .bubble:nth-child(3) { animation-delay: -3s; }
 .bubble:nth-child(4) { animation-delay: -4.5s; }
 
 .bubble:hover {
-  width: 170px;
-  height: 170px;
-  transform: scale(1.08);
+  transform: scale(1.05);
   box-shadow: var(--shadow-lg);
   border-color: var(--navy-light);
   z-index: 10;
@@ -161,17 +184,19 @@ body {
 .bubble-title {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: clamp(0.8rem, 1.4vw, 1.05rem);
   color: var(--navy);
   text-align: center;
   transition: font-size 0.4s ease;
 }
 
-.bubble:hover .bubble-title { font-size: 1rem; }
+.bubble-lg .bubble-title { font-size: clamp(0.9rem, 1.6vw, 1.2rem); }
+
+.bubble:hover .bubble-title { font-size: 105%; }
 
 .bubble-preview {
   font-family: var(--font-body);
-  font-size: 0.72rem;
+  font-size: clamp(0.6rem, 0.95vw, 0.78rem);
   color: var(--text-mid);
   text-align: center;
   line-height: 1.5;
@@ -182,6 +207,8 @@ body {
   overflow: hidden;
 }
 
+.bubble-lg .bubble-preview { font-size: clamp(0.65rem, 1.05vw, 0.85rem); }
+
 .bubble:hover .bubble-preview {
   opacity: 1;
   transform: translateY(2px);
@@ -189,10 +216,10 @@ body {
 }
 
 /* 4 bubbles layout — 左上/右上/左下/右下 */
-.bubble-1 { top: 16%; left: 6%; }
-.bubble-2 { top: 18%; right: 5%; }
-.bubble-3 { top: 52%; left: 3%; }
-.bubble-4 { top: 55%; right: 5%; }
+.bubble-1 { top: 12%; left: 4%; }
+.bubble-2 { top: 10%; right: 3%; }
+.bubble-3 { top: 48%; left: 2%; }
+.bubble-4 { top: 50%; right: 4%; }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
@@ -202,7 +229,7 @@ body {
 /* ---------- Scroll Hint ---------- */
 .scroll-hint {
   position: absolute;
-  bottom: 36px;
+  bottom: 28px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -213,6 +240,7 @@ body {
   font-size: 0.85rem;
   z-index: 2;
   animation: pulse 2s ease-in-out infinite;
+  white-space: nowrap;
 }
 
 .scroll-arrow {
@@ -467,7 +495,7 @@ body {
   font-family: var(--font-body);
 }
 
-/* ---------- Design Aesthetic — Door Gallery ---------- */
+/* ========== 设计与落地 — 门动画（修复版） ========== */
 .design-aesthetic { background: var(--white); }
 
 .doors-stage {
@@ -482,27 +510,26 @@ body {
 .door-wrapper {
   flex: 1;
   max-width: 170px;
+  position: relative;
   opacity: calc(1 - var(--door-index) * 0.12);
   transition: opacity 0.5s ease;
 }
 
 .door-wrapper:hover { opacity: 1; }
 
-.door {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transform: rotateY(28deg);
-  transform-origin: left center;
-  cursor: pointer;
+/* 画廊内容 — 始终在门后面 */
+.door-gallery {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-warm);
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-blue);
+  overflow-y: auto;
+  padding: 12px;
+  z-index: 0;
 }
 
-.door:hover {
-  transform: rotateY(0deg);
-}
-
+/* 门面 — 悬浮时旋转打开，露出后面的画廊 */
 .door-front {
   position: absolute;
   inset: 0;
@@ -515,9 +542,22 @@ body {
   gap: 10px;
   box-shadow: var(--shadow-md);
   border: 1px solid rgba(255,255,255,0.1);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+  z-index: 2;
+  cursor: pointer;
   padding: 16px;
+  transform: rotateY(28deg);
+  transform-origin: left center;
+  transition: transform 0.55s cubic-bezier(0.25, 0.8, 0.25, 1);
+  backface-visibility: hidden;
+}
+
+.door-front:hover {
+  transform: rotateY(70deg);
+}
+
+/* 点击后门保持全开 */
+.door-front.door-open {
+  transform: rotateY(85deg);
 }
 
 .door-icon { font-size: 2rem; }
@@ -527,19 +567,6 @@ body {
   font-weight: 700;
   font-size: 0.95rem;
   color: var(--white);
-}
-
-.door-gallery {
-  position: absolute;
-  inset: 0;
-  background: var(--bg-warm);
-  border-radius: var(--radius);
-  border: 1px solid var(--gray-blue);
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  overflow-y: auto;
-  padding: 12px;
 }
 
 /* Gallery image grid */
@@ -712,15 +739,37 @@ body {
   color: var(--text-light);
 }
 
-/* ---------- Responsive ---------- */
+/* ==========================================
+   响应式 — 手机端
+   ========================================== */
 @media (max-width: 768px) {
   .hero-title { font-size: 2rem; }
   .hero-subtitle { font-size: 1rem; }
   .hero-tags { font-size: 0.85rem; }
 
-  .bubbles-container { position: relative; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; padding: 36px 16px 0; }
-  .bubble { position: static; width: 100px; height: 100px; animation: none; }
-  .bubble:hover { width: 110px; height: 110px; }
+  /* 手机端泡泡恢复固定px，避免太小 */
+  .bubbles-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 32px 12px 0;
+  }
+  .bubble {
+    position: static;
+    width: 100px !important;
+    height: 100px !important;
+    animation: none;
+  }
+  .bubble:hover {
+    width: 110px !important;
+    height: 110px !important;
+  }
+  .bubble-title { font-size: 0.82rem !important; }
+  .bubble-preview { font-size: 0.65rem !important; }
+
+  .scroll-hint { bottom: 16px; font-size: 0.75rem; }
 
   .about-grid-3col { grid-template-columns: 1fr; }
   .vibe-grid,
@@ -728,7 +777,8 @@ body {
 
   .doors-stage { flex-direction: column; height: auto; gap: 10px; }
   .door-wrapper { max-width: 100%; min-height: 100px; }
-  .door { transform: rotateY(15deg); height: 120px; }
+  .door-front { transform: rotateY(15deg); height: 120px; }
+  .door-front:hover { transform: rotateY(60deg); }
 
   .contact-grid { grid-template-columns: 1fr; text-align: center; }
   .contact-item { justify-content: center; }
