@@ -336,11 +336,27 @@ body {
   }
 }
 
-/* Gallery — 单列滚动，图片全宽展示 */
+/* Gallery — 单列滚动，图片全宽展示（海报、比赛项目用） */
 .gallery-grid {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  padding: 4px;
+}
+
+/* Gallery — 2列网格（摄影用） */
+.gallery-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 4px;
+}
+
+/* Gallery — 3列网格（3D建模用） */
+.gallery-grid-3col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
   padding: 4px;
 }
 
@@ -408,14 +424,20 @@ body {
 
 /* ---------- Competition ---------- */
 .competition { background: var(--bg-warm); }
-.comp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-.comp-card { background: var(--white); border-radius: var(--radius-lg); padding: 32px; border: 1px solid var(--gray-blue); box-shadow: var(--shadow-sm); }
+.comp-grid { display: flex; flex-direction: column; gap: 32px; }
+.comp-card { background: var(--white); border-radius: var(--radius-lg); padding: 0; border: 1px solid var(--gray-blue); box-shadow: var(--shadow-sm); overflow: hidden; }
+.comp-card-inner { display: flex; gap: 0; }
+.comp-card-text { flex: 1; padding: 32px; min-width: 0; }
+.comp-card-gallery { flex: 0 0 320px; display: flex; flex-direction: column; gap: 10px; padding: 16px; overflow-y: auto; max-height: 500px; background: var(--bg-warm); border-left: 1px solid var(--gray-blue); }
+.comp-card-gallery .gallery-img { border-radius: 6px; cursor: pointer; }
 .comp-badge { display: inline-block; font-family: var(--font-heading); font-weight: 700; font-size: 0.85rem; color: var(--navy); background: var(--gray-blue); padding: 6px 14px; border-radius: 20px; margin-bottom: 16px; }
 .comp-title { font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; color: var(--navy); margin-bottom: 6px; }
 .comp-role { font-size: 0.9rem; color: var(--text-mid); margin-bottom: 14px; }
 .comp-desc { font-size: 0.95rem; color: var(--text); line-height: 1.8; margin-bottom: 16px; }
-.comp-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.comp-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
 .comp-tag { font-family: var(--font-heading); font-size: 0.76rem; color: var(--navy-light); border: 1px solid var(--gray-blue-dark); padding: 3px 10px; border-radius: 12px; }
+.comp-link { font-family: var(--font-heading); font-size: 0.9rem; color: var(--navy); text-decoration: none; font-weight: 700; transition: color 0.2s; display: inline-block; }
+.comp-link:hover { color: var(--navy-light); text-decoration: underline; }
 
 /* ---------- Contact ---------- */
 .contact { background: var(--white); }
@@ -449,7 +471,11 @@ body {
   .scroll-hint { bottom: 12px; font-size: 0.72rem; }
 
   .about-grid-3col { grid-template-columns: 1fr; }
-  .vibe-grid, .comp-grid { grid-template-columns: 1fr; }
+  .vibe-grid,.comp-grid { grid-template-columns: 1fr; }
+  .comp-grid { display: flex; flex-direction: column; }
+  .comp-card-inner { flex-direction: column; }
+  .comp-card-gallery { flex: 0 0 auto; max-height: none; border-left: none; border-top: 1px solid var(--gray-blue); flex-direction: row; overflow-x: auto; overflow-y: hidden; gap: 10px; padding: 12px; }
+  .comp-card-gallery .gallery-img { width: 200px; flex-shrink: 0; }
 
   .doors-stage { flex-direction: column; height: auto; min-height: 400px; gap: 10px; }
   .door-wrapper { min-height: 80px; flex: 0 0 auto; }
