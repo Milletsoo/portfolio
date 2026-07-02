@@ -99,6 +99,37 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // ==================== 灯箱：点击图片大图预览 ====================
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightbox-img');
+  var lightboxClose = document.querySelector('.lightbox-close');
+
+  // 监听所有 gallery-img 的点击
+  document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('gallery-img')) {
+      if (lightbox && lightboxImg) {
+        lightboxImg.src = e.target.src;
+        lightbox.classList.add('active');
+      }
+    }
+  });
+
+  // 关闭灯箱
+  if (lightbox) {
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox || e.target === lightboxClose) {
+        lightbox.classList.remove('active');
+      }
+    });
+  }
+
+  // ESC 关闭
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lightbox) {
+      lightbox.classList.remove('active');
+    }
+  });
+
   // ==================== 二维码 ====================
   var qr = document.getElementById('qrcode');
   if (qr && typeof QRCode !== 'undefined') {
