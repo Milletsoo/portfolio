@@ -297,6 +297,21 @@ body {
   border: none;
 }
 
+/* 视频/动画居中排列 */
+.gallery-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 0;
+}
+
+.video-card-centered {
+  max-width: 640px;
+  width: 100%;
+  text-align: center;
+}
+
 /* =====================================
    设计与技术 — 门画廊 v2（JS驱动开关）
    ===================================== */
