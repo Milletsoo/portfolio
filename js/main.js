@@ -2,7 +2,30 @@
    欧夏佚作品集 — 交互逻辑 v4
    ======================================== */
 
+// ==================== 站点配置 ====================
+// 简历文件路径：更新简历时替换 resume.pdf 文件；若改名，同步修改此路径
+var RESUME_URL = 'resume.pdf';
+
 document.addEventListener('DOMContentLoaded', function() {
+
+  // ==================== 简历链接参数化 ====================
+  document.querySelectorAll('[data-resume]').forEach(function(a) {
+    a.setAttribute('href', RESUME_URL);
+  });
+
+  // ==================== Tab 切换（实习项目 / 个人作品） ====================
+  var tabs = document.querySelectorAll('.vibe-tab');
+  var panels = document.querySelectorAll('.vibe-panel');
+  tabs.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      var target = this.getAttribute('data-tab');
+      tabs.forEach(function(t) { t.classList.remove('active'); });
+      panels.forEach(function(p) { p.classList.remove('active'); });
+      this.classList.add('active');
+      var panel = document.getElementById('panel-' + target);
+      if (panel) panel.classList.add('active');
+    });
+  });
 
   // ==================== 泡泡导航 ====================
   var bubbles = document.querySelectorAll('.bubble');

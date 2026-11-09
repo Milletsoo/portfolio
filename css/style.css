@@ -206,7 +206,7 @@ body {
 .placeholder-icon { font-size: 2.8rem; } .placeholder-text { font-size: 0.85rem; }
 .vibe-card-body { padding: 24px; display: flex; flex-direction: column; flex: 1; }
 .vibe-card-title { font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; color: var(--navy); margin-bottom: 4px; }
-.vibe-card-tagline { font-size: 0.9rem; color: var(--text-mid); margin-bottom: 18px; }
+.vibe-card-tagline { font-size: 0.9rem; color: var(--text-mid); margin-bottom: 12px; }
 .vibe-card-section { margin-bottom: 14px; }
 .vibe-card-section h4 { font-family: var(--font-heading); font-size: 0.88rem; color: var(--navy); margin-bottom: 4px; }
 .vibe-card-section p { font-size: 0.9rem; color: var(--text); line-height: 1.7; }
@@ -234,13 +234,13 @@ body {
   text-decoration: none;
 }
 
-/* 京东实习角标 */
+/* 京东实习角标（深蓝主题色） */
 .vibe-badge {
   position: absolute;
   top: 12px;
   left: 12px;
   z-index: 3;
-  background: linear-gradient(135deg, #E2231A, #C0170F);
+  background: var(--navy);
   color: #fff;
   font-family: var(--font-heading);
   font-size: 0.72rem;
@@ -248,34 +248,59 @@ body {
   padding: 5px 12px;
   border-radius: 8px;
   letter-spacing: 0.06em;
-  box-shadow: 0 2px 10px rgba(192, 23, 15, 0.28);
+  box-shadow: 0 2px 10px rgba(27, 42, 74, 0.28);
 }
 
-/* 分组标题（横跨两列） */
-.vibe-group-title {
-  grid-column: 1 / -1;
+/* Tab 导航 */
+.vibe-tabs {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 20px 0 12px;
-  padding-bottom: 14px;
-  font-family: var(--font-heading);
-  font-size: 1.18rem;
-  font-weight: 700;
-  color: var(--navy);
-  letter-spacing: 0.05em;
-  border-bottom: 2px solid var(--gray-blue);
+  gap: 0;
+  max-width: 320px;
+  margin: 0 auto 28px;
+  padding: 4px;
+  background: var(--gray-blue);
+  border-radius: 999px;
 }
 
-.vibe-group-sub {
-  font-size: 0.76rem;
-  font-weight: 700;
-  color: #E2231A;
-  letter-spacing: 0.04em;
-  padding: 3px 10px;
-  border: 1px solid rgba(226, 35, 26, 0.35);
+.vibe-tab {
+  flex: 1;
+  padding: 9px 0;
+  border: none;
   border-radius: 999px;
-  background: rgba(226, 35, 26, 0.05);
+  background: transparent;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-mid);
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.vibe-tab.active {
+  background: var(--navy);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(27, 42, 74, 0.25);
+}
+
+/* Panel */
+.vibe-panel { display: none; }
+.vibe-panel.active { display: block; }
+
+/* 精简卡片正文与工具标签 */
+.vibe-card-desc {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+
+.vibe-card-tools {
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  color: var(--text-light);
+  line-height: 1.4;
+  margin-bottom: 14px;
 }
 
 /* CC提醒插件双图叠放 */
