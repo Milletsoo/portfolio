@@ -104,7 +104,18 @@
   <section id="vibecoding" class="section vibecoding">
     <div class="section-container">
       <h2 class="section-title">Vibe Coding 作品</h2>
-      <p class="section-desc">以下作品均由我独立完成产品设计，并使用 AI 编程工具（Claude Code、Proma 等）亲手开发实现。包含京东实习期间真实上线的生产项目及个人独立作品。</p>
+      <p class="section-desc">以下作品均由我独立完成产品设计，并使用 AI 编程工具（Claude Code、Proma 等）亲手开发实现。</p>
+
+      <div class="vibe-guide">
+        <div class="vibe-guide-item">
+          <span class="vibe-guide-text">点击【实习项目】<br>查看京东实习期间真实上线的生产项目</span>
+          <span class="vibe-guide-arrow">👇</span>
+        </div>
+        <div class="vibe-guide-item">
+          <span class="vibe-guide-text">点击【个人作品】<br>查看个人独立开发作品</span>
+          <span class="vibe-guide-arrow">👇</span>
+        </div>
+      </div>
 
       <div class="vibe-tabs" role="tablist">
         <button type="button" class="vibe-tab active" data-tab="internship">实习项目</button>
@@ -114,18 +125,17 @@
       <div class="vibe-panel active" id="panel-internship">
         <div class="vibe-grid">
 
-        <!-- 实习 1 · 业财需求门户 -->
+        <!-- 实习 1 · 集团级业财对接 AI 平台 -->
         <div class="vibe-card">
-          <div class="vibe-card-img">
+          <div class="vibe-card-img vibe-card-img-contain">
             <span class="vibe-badge">京东实习</span>
-            <img src="images/projects/jd-portal.jpg" alt="业财需求门户" class="vibe-img">
+            <img src="images/projects/jd-portal.jpg" alt="集团级业财对接 AI 平台" class="vibe-img">
           </div>
           <div class="vibe-card-body">
-            <h3 class="vibe-card-title">业财需求门户 · 新业务评估平台</h3>
+            <h3 class="vibe-card-title">集团级业财对接 AI 平台</h3>
             <p class="vibe-card-tagline">从 0 到 1 承接开发与测试</p>
             <p class="vibe-card-desc">独立完成 SSO 鉴权、评审弹窗、消息提醒等 10+ 功能上线与 10+ 处前端改造，输出 2 万+ 行代码、153 次提交；全流程测试提出 50+ 条 bug（占全量 20%）。平台 9 月底上线，覆盖科技、零售、物流三大 BG，承接近 300 个需求。</p>
             <p class="vibe-card-tools">SSO 鉴权 · 前端改造 · 全流程测试</p>
-            <div class="vibe-card-footer"><span class="vibe-link-disabled">内部生产系统 · 已上线</span></div>
           </div>
         </div>
 
@@ -140,7 +150,6 @@
             <p class="vibe-card-tagline">两周独立搭建的一站式 AI 宣贯入口</p>
             <p class="vibe-card-desc">含八大模块、40+ 交互跳转，整合 AI 愿景、学习资源、人才标签；部署 pv/uv 埋点看板，以运营数据驱动迭代。</p>
             <p class="vibe-card-tools">前端搭建 · 埋点看板</p>
-            <div class="vibe-card-footer"><span class="vibe-link-disabled">内部网站 · 已上线</span></div>
           </div>
         </div>
 
@@ -155,7 +164,6 @@
             <p class="vibe-card-tagline">精度到单次会话的 Token 消耗统计</p>
             <p class="vibe-card-desc">自主开发 token 监测 Skill，从任务、模型、时间多维度统计 Token 消耗与费用，精度可达单次 prompt 会话级，为团队提升 Token 利用效率提供数据参考。</p>
             <p class="vibe-card-tools">Claude Code Skill · 数据看板</p>
-            <div class="vibe-card-footer vibe-footer-active"><a href="https://github.com/Milletsoo/ai-usage-monitor" target="_blank" class="vibe-link">点击查看开源项目 →</a></div>
           </div>
         </div>
 
@@ -173,7 +181,6 @@
             <p class="vibe-card-tagline">关联交易智能审核 × 内网技能搜索</p>
             <p class="vibe-card-desc">关联交易审核 Skill 独立完成业务调研到技术验证全流程（负责 80% 工作量），沉淀「先梳理场景 → 补齐 Skill → 再打包 Agent」方法论；内网技能搜索 Skill 用「需求泛化 → 多轮搜索 → 精准打分」方案，口语化输入即可命中 2 万+ Skill。</p>
             <p class="vibe-card-tools">Claude Code · Skill 工程 · Agent 编排</p>
-            <div class="vibe-card-footer vibe-footer-active"><a href="https://github.com/Milletsoo/skill-radar" target="_blank" class="vibe-link">点击查看开源项目 →</a></div>
           </div>
         </div>
 
@@ -188,7 +195,6 @@
             <p class="vibe-card-tagline">独立打通前端、后端、数据库全链路</p>
             <p class="vibe-card-desc">通过京me开放平台 + 想象力平台开发部署，实现一键打卡、姓名记录、管理者看进度，解决部门群每日手动接龙打卡、消息刷屏的痛点。</p>
             <p class="vibe-card-tools">全栈开发 · 京me开放平台</p>
-            <div class="vibe-card-footer"><span class="vibe-link-disabled">内部工具 · 已上线</span></div>
           </div>
         </div>
 
@@ -203,7 +209,6 @@
             <p class="vibe-card-tagline">把散落表格产品化为动态日历</p>
             <p class="vibe-card-desc">将流程岗工作安排产品化为动态工作日历，周期工作可视化，提升团队工作管理效率。</p>
             <p class="vibe-card-tools">产品化 · 前端</p>
-            <div class="vibe-card-footer"><span class="vibe-link-disabled">内部工具 · 已上线</span></div>
           </div>
         </div>
 
