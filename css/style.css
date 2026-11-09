@@ -268,7 +268,7 @@ body {
   display: flex;
   align-items: center;
   font-family: var(--font-heading);
-  font-size: 0.65rem;
+  font-size: 11.5px;
   color: #B6BEC8;
   line-height: 1.4;
   white-space: nowrap;
