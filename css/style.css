@@ -258,26 +258,25 @@ body {
 /* Tab 指引文案 */
 .vibe-guide {
   display: flex;
+  justify-content: center;
   align-items: center;
-  max-width: 320px;
+  gap: 14px;
   margin: 0 auto 8px;
 }
 
 .vibe-guide-item {
-  flex: 1;
+  display: flex;
+  align-items: center;
   font-family: var(--font-heading);
-  font-size: 0.68rem;
-  color: #AEB6C0;
+  font-size: 0.65rem;
+  color: #B6BEC8;
   line-height: 1.4;
   white-space: nowrap;
 }
 
-.vibe-guide-item:first-child { text-align: right; }
-.vibe-guide-item:last-child { text-align: left; }
-
 .vibe-guide-arrow {
-  font-size: 0.85rem;
-  margin: 0 8px;
+  font-size: 0.8rem;
+  margin: 0 2px;
   animation: guide-bounce 1.6s ease-in-out infinite;
 }
 
