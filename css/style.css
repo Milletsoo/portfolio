@@ -258,24 +258,26 @@ body {
 /* Tab 指引文案 */
 .vibe-guide {
   display: flex;
+  align-items: center;
   max-width: 320px;
   margin: 0 auto 8px;
 }
 
 .vibe-guide-item {
   flex: 1;
-  text-align: center;
-  padding: 0 4px;
   font-family: var(--font-heading);
-  font-size: 0.76rem;
-  color: var(--text-light);
+  font-size: 0.68rem;
+  color: #AEB6C0;
   line-height: 1.4;
   white-space: nowrap;
 }
 
+.vibe-guide-item:first-child { text-align: right; }
+.vibe-guide-item:last-child { text-align: left; }
+
 .vibe-guide-arrow {
-  font-size: 0.9rem;
-  margin-right: 3px;
+  font-size: 0.85rem;
+  margin: 0 8px;
   animation: guide-bounce 1.6s ease-in-out infinite;
 }
 
