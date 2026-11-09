@@ -259,28 +259,23 @@ body {
 .vibe-guide {
   display: flex;
   max-width: 320px;
-  margin: 0 auto 2px;
+  margin: 0 auto 8px;
 }
 
 .vibe-guide-item {
   flex: 1;
   text-align: center;
   padding: 0 4px;
-}
-
-.vibe-guide-text {
-  display: block;
   font-family: var(--font-heading);
   font-size: 0.76rem;
-  color: var(--text-mid);
-  line-height: 1.6;
+  color: var(--text-light);
+  line-height: 1.4;
+  white-space: nowrap;
 }
 
 .vibe-guide-arrow {
-  display: block;
-  font-size: 1rem;
-  line-height: 1;
-  margin-top: 2px;
+  font-size: 0.9rem;
+  margin-right: 3px;
   animation: guide-bounce 1.6s ease-in-out infinite;
 }
 
